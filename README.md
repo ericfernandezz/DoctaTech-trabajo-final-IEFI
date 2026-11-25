@@ -42,21 +42,9 @@ Los módulos ES y `fetch` requieren servirlo por HTTP (no abrir los HTML con dob
 
 ## Tests
 
-```bash
+bash
 node --test
-```
 
 Usa el runner nativo de Node (sin dependencias): 40 tests sobre filtros, carrito, persistencia, validaciones, armado de pedidos y enlaces de Gmail e integridad del JSON.
-
-## Configuración pendiente antes de publicar
-
-En `src/resources/js/config.js` reemplazar `emailTienda` por la casilla de Gmail real del negocio.
-Revisar también teléfono/mail del pie y de `contacto.html`.
-
-## Despliegue (Vercel + GitHub Actions)
-
-1. Subir el repositorio a GitHub e importarlo en Vercel (`vercel.json` ya define `src` como carpeta pública).
-2. Para el deploy automático desde Actions, crear los *secrets* `VERCEL_TOKEN`, `VERCEL_ORG_ID` y `VERCEL_PROJECT_ID`.
-3. Cada `push` a `main` ejecuta los tests y, si pasan, despliega a producción. Los Pull Requests solo ejecutan los tests.
 
 Gracias profe por darnos la materia <3
