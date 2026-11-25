@@ -1,4 +1,3 @@
-// REGLAS DE NEGOCIO de los pedidos (funciones puras): número de pedido y armado del objeto pedido.
 import { calcularTotal, calcularUnidades } from './carrito.js';
 
 export const ENTREGAS = Object.freeze({
@@ -14,7 +13,6 @@ export const PAGOS = Object.freeze({
 
 const dosDigitos = numero => String(numero).padStart(2, '0');
 
-// Ejemplo: DT-20261125-4821
 export function generarNumeroPedido(fecha = new Date(), aleatorio = Math.random) {
     const dia = `${fecha.getFullYear()}${dosDigitos(fecha.getMonth() + 1)}${dosDigitos(fecha.getDate())}`;
     const sufijo = Math.floor(aleatorio() * 9000) + 1000;

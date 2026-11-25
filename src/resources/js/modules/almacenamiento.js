@@ -5,7 +5,7 @@ export function obtenerStorage() {
     try {
         return globalThis.localStorage ?? null;
     } catch {
-        return null; // por ejemplo, navegación privada o cookies bloqueadas
+        return null; 
     }
 }
 
@@ -14,7 +14,7 @@ export function leerJSON(clave, porDefecto = null, storage = obtenerStorage()) {
         const crudo = storage?.getItem(clave);
         return crudo ? JSON.parse(crudo) : porDefecto;
     } catch {
-        return porDefecto; // JSON corrupto
+        return porDefecto; 
     }
 }
 
@@ -23,6 +23,6 @@ export function guardarJSON(clave, valor, storage = obtenerStorage()) {
         storage.setItem(clave, JSON.stringify(valor));
         return true;
     } catch {
-        return false; // cuota excedida o storage no disponible
+        return false; 
     }
 }

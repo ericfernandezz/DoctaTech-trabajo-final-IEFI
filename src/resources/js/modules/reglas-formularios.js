@@ -1,4 +1,3 @@
-// REGLAS por formulario: qué validador se aplica a cada campo (funciones puras).
 import {
     validarNombre,
     validarEmail,

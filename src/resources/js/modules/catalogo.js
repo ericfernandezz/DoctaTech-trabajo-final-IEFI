@@ -3,7 +3,6 @@ import { normalizarTexto } from './utils.js';
 
 const STOCK_BAJO_MAXIMO = 5;
 
-// Filtra por texto (todas las palabras deben aparecer), categoría, marca y rango de precio.
 export function filtrarProductos(productos, filtros = {}) {
     const { texto = '', categoria = '', marca = '', precioMin = null, precioMax = null } = filtros;
     const terminos = normalizarTexto(texto).split(/\s+/).filter(Boolean);
@@ -23,7 +22,6 @@ export function filtrarProductos(productos, filtros = {}) {
     });
 }
 
-// Devuelve una copia ordenada (no modifica el array original).
 export function ordenarProductos(productos, criterio = 'relevancia') {
     const copia = [...productos];
     switch (criterio) {
@@ -38,7 +36,6 @@ export function ordenarProductos(productos, criterio = 'relevancia') {
     }
 }
 
-// Valores únicos de un campo (para armar los <select> de categoría y marca).
 export const valoresUnicos = (productos, campo) =>
     [...new Set(productos.map(producto => producto[campo]))].sort((a, b) => a.localeCompare(b, 'es'));
 

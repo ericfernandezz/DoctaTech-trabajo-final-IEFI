@@ -1,5 +1,4 @@
-// CONTROLADOR del carrito: escucha los eventos (clics, teclado) y llama a las reglas y al estado.
-// El dibujo del panel está en vista-carrito.js.
+
 import { suscribir, agregar, cambiar, quitar, vaciar, obtenerItems } from './carrito-estado.js';
 import { renderizarCarrito, alternarPanel } from './vista-carrito.js';
 import { aEntero } from './utils.js';

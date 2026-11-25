@@ -1,4 +1,3 @@
-// PERSISTENCIA del último pedido confirmado.
 import { CONFIG } from '../config.js';
 import { leerJSON, guardarJSON, obtenerStorage } from './almacenamiento.js';
 

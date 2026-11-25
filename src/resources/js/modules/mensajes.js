@@ -58,12 +58,10 @@ function armarParametros(destinatario, asunto, cuerpo, copia) {
     return partes.join('&');
 }
 
-// Abre la redacción de Gmail con el mensaje listo (la copia va al cliente si se informa).
 export function construirUrlGmail(destinatario, asunto, cuerpo, copia = '') {
     return `${URL_GMAIL}&${armarParametros(destinatario, asunto, cuerpo, copia)}`;
 }
 
-// Alternativa para quien no usa Gmail en el navegador: abre su programa de correo.
 export function construirUrlMailto(destinatario, asunto, cuerpo, copia = '') {
     const partes = [];
     if (copia) partes.push(`cc=${encodeURIComponent(copia)}`);

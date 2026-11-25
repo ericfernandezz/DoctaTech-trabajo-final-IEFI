@@ -1,4 +1,3 @@
-// Ayudas de DOM para formularios: leer datos y mostrar/limpiar errores de validación.
 
 export const datosDelFormulario = formulario => Object.fromEntries(new FormData(formulario));
 
@@ -35,7 +34,6 @@ export function mostrarErrores(formulario, errores) {
     campoDe(formulario, nombres[0])?.focus();
 }
 
-// Validación "en vivo": al salir de un campo se valida solo ese campo; al corregirlo, el error desaparece.
 export function activarValidacionEnVivo(formulario, reglas) {
     const validarCampo = nombre => {
         const regla = reglas[nombre];

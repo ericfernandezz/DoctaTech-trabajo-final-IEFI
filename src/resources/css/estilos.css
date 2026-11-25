@@ -391,7 +391,7 @@ body.carrito-abierto { overflow: hidden; }
 }
 
 
-/* ===== Accesibilidad ===== */
+/*Accesibilidad*/
 .enlace-salto {
   position: absolute;
   left: 8px;
@@ -410,7 +410,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline-offset: 2px;
 }
 
-/* ===== Catálogo y filtros ===== */
+/*Catálogo y filtros*/
 .contenido-principal .filtros {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -430,7 +430,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .contenido-principal .mensaje-error { padding: 14px 16px; border-left: 4px solid var(--peligro); border-radius: 4px; background-color: #fdecec; color: #8a1f23; font-weight: 600; }
 .contenido-principal .sin-productos { padding: 18px; border-radius: var(--radio); background-color: #fff; color: var(--titulo); text-align: center; }
 
-/* ===== Detalle de producto ===== */
+/*Detalle de producto*/
 .contenido-principal .migas { color: #fff; font-size: 0.92rem; }
 .contenido-principal .migas a { color: #fff; }
 .contenido-principal .detalle-producto { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 28px; }
@@ -446,7 +446,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .contenido-principal .tabla-ficha th { width: 38%; background-color: var(--superficie); color: var(--titulo); }
 .contenido-principal .acciones-producto { margin-top: 4px; }
 
-/* ===== Formularios ===== */
+/*Formularios*/
 .contenido-principal .formulario { display: flex; flex-direction: column; gap: 6px; }
 .contenido-principal .formulario h2 { margin: 0; }
 .contenido-principal .campo { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
@@ -464,8 +464,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .contenido-principal .formulario fieldset label { margin-right: 14px; }
 .contenido-principal .error-campo { min-height: 1em; color: #b3261e; font-size: 0.88rem; font-weight: 600; }
 .contenido-principal .error-campo:empty { display: none; }
-/* En formularios se reserva el espacio del error para que el diseño no "salte" al validar al salir de un campo
-   (si saltara, el clic en el elemento siguiente podría perderse). */
+
 .contenido-principal .formulario .error-campo:empty { display: block; }
 [aria-invalid="true"] { border-color: #b3261e !important; background-color: #fff6f5 !important; }
 .contenido-principal .acciones-formulario { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -474,14 +473,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .contenido-principal .numero-pedido { font-size: 1.15rem; }
 .contenido-principal .lista-confirmacion { margin: 16px 0; }
 
-/* ===== Checkout ===== */
+/*Checkout*/
 .contenido-principal .checkout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--espacio); align-items: start; }
 .contenido-principal .resumen-pedido { position: sticky; top: 100px; }
 .contenido-principal .resumen-linea { display: flex; justify-content: space-between; margin: 12px 0 0; }
 .contenido-principal #datos-envio { display: flex; flex-direction: column; gap: 16px; }
 .contenido-principal #datos-envio[hidden] { display: none; }
 
-/* ===== Carrito (panel y resumen) ===== */
+/*Carrito (panel y resumen)*/
 .carrito-lista { margin: 0; padding: 0 !important; list-style: none !important; }
 .carrito-item { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--borde-tabla); }
 .carrito-item img { width: 56px; height: 56px; object-fit: contain; border-radius: 6px; background-color: #fff; }
@@ -510,7 +509,7 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 .boton-peligro:hover { background-color: var(--peligro); border-color: var(--peligro); color: #fff; }
 .panel-carrito .carrito-vacio { padding: 30px 0; }
 
-/* ===== Notificaciones ===== */
+/*Notificaciones*/
 .notificaciones { pointer-events: none; position: fixed; right: 16px; bottom: 16px; z-index: 90; display: flex; flex-direction: column; gap: 10px; width: min(360px, calc(100% - 32px)); }
 .notificaciones .toast { padding: 14px 16px; border-left: 5px solid var(--azul); border-radius: 6px; background-color: #fff; box-shadow: 0 6px 20px rgb(0 0 0 / 28%); color: var(--titulo); font-weight: 600; animation: entrada-toast 0.25s ease; }
 .notificaciones .toast-exito { border-left-color: #2e9e4f; }
@@ -532,7 +531,7 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
   .carrito-item-lado { grid-column: 1 / -1; flex-direction: row; justify-content: space-between; align-items: center; }
 }
 
-/* ===== Resumen y acciones del carrito ===== */
+/*Resumen y acciones del carrito*/
 .resumen-carrito { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 360px; margin: 20px 0 0 auto; padding: 16px 20px; border-radius: 7px; background-color: var(--superficie); }
 .texto-total, .importe-total { margin: 0; }
 .texto-total { font-weight: 600; }

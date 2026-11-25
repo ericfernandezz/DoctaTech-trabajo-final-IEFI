@@ -1,5 +1,4 @@
-// Validaciones PURAS: cada función devuelve '' si el valor es válido o el mensaje de error.
-// Se usan además de los atributos HTML (required, type, minlength, pattern).
+
 
 const REGEX_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const REGEX_NOMBRE = /^[\p{L}][\p{L}\s'.-]*$/u;
@@ -58,7 +57,6 @@ export function validarCantidad(valor, maximo, minimo = 1) {
     return '';
 }
 
-// Ejecuta un conjunto de reglas { campo: (valor, datos) => mensaje } sobre los datos del formulario.
 export function validarFormulario(datos, reglas) {
     const errores = {};
     for (const [campo, regla] of Object.entries(reglas)) {

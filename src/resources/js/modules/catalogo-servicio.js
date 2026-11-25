@@ -1,4 +1,3 @@
-// ACCESO A DATOS del catálogo: pide el JSON con fetch y maneja los errores con try/catch.
 import { CONFIG } from '../config.js';
 
 const MENSAJE_ERROR = 'No pudimos cargar el catálogo. Revisá tu conexión e intentá nuevamente.';

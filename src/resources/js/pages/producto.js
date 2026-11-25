@@ -94,7 +94,6 @@ function conectarFormularioCantidad(producto, limite) {
     });
 }
 
-// Proceso principal de la página: se llama una sola vez al final del archivo.
 async function iniciarProducto() {
     iniciarComun();
 

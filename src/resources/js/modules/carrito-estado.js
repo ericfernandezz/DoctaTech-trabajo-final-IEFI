@@ -1,5 +1,4 @@
-// ESTADO del carrito en el navegador: mantiene el array, lo persiste y avisa a quien se
-// haya suscripto (patrón observador) cada vez que cambia.
+
 import { CONFIG } from '../config.js';
 import { agregarItem, cambiarCantidad, quitarItem } from './carrito.js';
 import { leerCarrito, guardarCarrito } from './carrito-persistencia.js';
@@ -33,7 +32,6 @@ export const cambiar = (id, cantidad) => actualizar(cambiarCantidad(items, id, c
 export const quitar = id => actualizar(quitarItem(items, id));
 export const vaciar = () => actualizar([]);
 
-// Si el carrito cambia en otra pestaña, esta pestaña se actualiza sola.
 window.addEventListener('storage', evento => {
     if (evento.key === CONFIG.claveCarrito) {
         items = leerCarrito();

@@ -1,4 +1,3 @@
-// Inicialización común a todas las páginas: carrito, buscador del encabezado y año del pie.
 import { montarPanelCarrito } from './vista-carrito.js';
 import { iniciarCarritoUI } from './carrito-ui.js';
 
@@ -12,7 +11,6 @@ function iniciarBuscadorGlobal() {
     const estaEnCatalogo = Boolean(document.getElementById('contenedor-productos'));
     formulario.addEventListener('submit', evento => {
         evento.preventDefault();
-        // En las demás páginas, buscar lleva al catálogo con la búsqueda ya aplicada.
         if (!estaEnCatalogo) {
             const texto = campo.value.trim();
             window.location.href = `${PAGINA_CATALOGO}${texto ? `?buscar=${encodeURIComponent(texto)}` : ''}#catalogo`;

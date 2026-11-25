@@ -1,4 +1,3 @@
-// RENDERIZADO de la confirmación del pedido (solo arma el HTML; no decide ni guarda nada).
 import { escaparHTML, formatearPrecio } from './utils.js';
 import { ENTREGAS, PAGOS } from './pedidos.js';
 

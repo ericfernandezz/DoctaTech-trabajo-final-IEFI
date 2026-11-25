@@ -1,5 +1,4 @@
-// REGLAS DE NEGOCIO del carrito: funciones PURAS que reciben un array y devuelven uno nuevo.
-// No tocan el DOM ni el storage, por eso se pueden probar con node:test.
+
 import { CONFIG } from '../config.js';
 
 export const limiteDe = producto =>

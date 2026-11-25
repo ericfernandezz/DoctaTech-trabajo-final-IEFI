@@ -1,5 +1,4 @@
-// RENDERIZADO del carrito: monta el panel lateral, dibuja los ítems y controla abrir/cerrar.
-// No decide reglas de negocio ni responde a clics: eso lo hace carrito-ui.js.
+
 import { calcularTotal, calcularUnidades } from './carrito.js';
 import { formatearPrecio } from './utils.js';
 import { plantillaItemCarrito } from './vistas.js';

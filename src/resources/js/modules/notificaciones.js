@@ -1,4 +1,3 @@
-// Notificaciones visuales (toasts) accesibles: se anuncian con aria-live.
 
 export function notificar(mensaje, tipo = 'info', duracion = 4500) {
     let contenedor = document.getElementById('notificaciones');

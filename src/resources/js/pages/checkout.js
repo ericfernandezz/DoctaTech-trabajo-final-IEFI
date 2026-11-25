@@ -51,7 +51,6 @@ function mostrarConfirmacion(pedido) {
     document.getElementById('titulo-confirmacion').focus();
 }
 
-// Se ejecuta cada vez que cambia el carrito.
 function alCambiarElCarrito(items) {
     if (confirmado) return;
     if (items.length === 0) {

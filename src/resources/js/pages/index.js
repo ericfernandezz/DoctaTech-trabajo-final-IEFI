@@ -25,7 +25,6 @@ function llenarSelect(select, valores) {
     );
 }
 
-// Lee los controles del formulario y valida el rango de precios (validación en JavaScript).
 function leerFiltros() {
     let precioMin = aNumeroONulo(formulario.elements.precioMin.value);
     let precioMax = aNumeroONulo(formulario.elements.precioMax.value);
@@ -59,8 +58,7 @@ function aplicarFiltros() {
     const { filtros, orden, error } = leerFiltros();
     errorPrecio.textContent = error;
 
-    // Si nada cambió no se vuelve a dibujar: evita perder un clic en "Agregar" cuando el
-    // campo de precio pierde el foco y dispara "change" justo antes del clic.
+   
     const clave = JSON.stringify([filtros, orden]);
     if (clave === ultimaClave) return;
     ultimaClave = clave;
@@ -84,7 +82,7 @@ function conectarEventos() {
     formulario.addEventListener('submit', evento => evento.preventDefault());
     formulario.addEventListener('reset', () => {
         buscador.value = '';
-        setTimeout(aplicarFiltros); // espera a que el navegador termine de limpiar los campos
+        setTimeout(aplicarFiltros); //termina de limpiar los campos
     });
     buscador.addEventListener('input', aplicarFiltros);
 }
