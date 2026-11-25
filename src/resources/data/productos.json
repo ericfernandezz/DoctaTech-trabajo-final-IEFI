@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mouse Redragon K1ng 1k M724 12400dpi Blanco",
+    "marca": "Redragon",
+    "categoria": "Periféricos",
+    "precio": 25900,
+    "stock": 12,
+    "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_857792-MLA110113344886_042026-F.webp",
+    "descripcion": "Mouse gamer Redragon K1ng 1k M724 12400dpi Blanco, con sensor óptico de alta precisión y diseño ergonómico para largas sesiones de juego.",
+    "especificaciones": {
+      "Tipo": "Mouse gamer",
+      "Sensor": "Óptico",
+      "Resolución máxima": "12.400 DPI",
+      "Color": "Blanco"
+    }
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Redragon K552 Kumara RGB Mecánico",
+    "marca": "Redragon",
+    "categoria": "Periféricos",
+    "precio": 49900,
+    "stock": 8,
+    "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_958438-MLA117000823232_102026-F.webp",
+    "descripcion": "Teclado mecánico Redragon K552 Kumara RGB, con retroiluminación RGB personalizable y switches mecánicos para una experiencia de escritura y juego superior.",
+    "especificaciones": {
+      "Tipo": "Teclado mecánico",
+      "Modelo": "K552 Kumara",
+      "Iluminación": "RGB personalizable",
+      "Switches": "Mecánicos"
+    }
+  },
+  {
+    "id": 3,
+    "nombre": "Auriculares Redragon H510 Zeus",
+    "marca": "Redragon",
+    "categoria": "Periféricos",
+    "precio": 39900,
+    "stock": 6,
+    "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_660245-MLA83496416270_042025-F.webp",
+    "descripcion": "Auriculares gaming Redragon H510 Zeus, con sonido envolvente y micrófono incorporado para una experiencia de juego inmersiva.",
+    "especificaciones": {
+      "Tipo": "Auriculares gaming",
+      "Modelo": "H510 Zeus",
+      "Sonido": "Envolvente",
+      "Micrófono": "Incorporado"
+    }
+  },
+  {
+    "id": 4,
+    "nombre": "Monitor Redragon 27\" Curvo 165Hz",
+    "marca": "Redragon",
+    "categoria": "Monitores",
+    "precio": 89900,
+    "stock": 4,
+    "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_863415-MLA81835085441_012025-F.webp",
+    "descripcion": "Monitor gaming Redragon 27\" Curvo 165Hz, con alta resolución y tiempos de respuesta ultra rápidos para una experiencia de juego inmersiva.",
+    "especificaciones": {
+      "Tipo": "Monitor gaming",
+      "Tamaño": "27 pulgadas",
+      "Panel": "Curvo",
+      "Frecuencia de actualización": "165 Hz"
+    }
+  },
+  {
+    "id": 5,
+    "nombre": "Notebook Gamer ASUS ROG Strix",
+    "marca": "ASUS",
+    "categoria": "Notebooks",
+    "precio": 129900,
+    "stock": 3,
+    "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_849336-MLA99458218708_112025-F.webp",
+    "descripcion": "Notebook gamer ASUS ROG Strix, pensada para juegos y tareas exigentes. Consultá por correo la configuración exacta disponible (procesador, memoria y almacenamiento).",
+    "especificaciones": {
+      "Tipo": "Notebook gamer",
+      "Línea": "ROG Strix",
+      "Uso": "Gaming y trabajo exigente",
+      "Configuración": "Consultar disponibilidad"
+    }
+  },
+  {
+    "id": 6,
+    "nombre": "Silla Gamer Redragon Invader",
+    "marca": "Redragon",
+    "categoria": "Sillas",
+    "precio": 159900,
+    "stock": 2,
+    "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_870374-MLA95558806237_102025-F.webp",
+    "descripcion": "Silla gamer Redragon Invader, con diseño ergonómico y materiales de alta calidad para largas sesiones de juego cómodas.",
+    "especificaciones": {
+      "Tipo": "Silla gamer",
+      "Modelo": "Invader",
+      "Diseño": "Ergonómico",
+      "Colores": "Negro y rojo"
+    }
+  }
+]

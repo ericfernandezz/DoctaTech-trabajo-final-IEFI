@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Completá tus datos y confirmá tu pedido en DoctaTech." />
+    <title>DoctaTech - Finalizar compra</title>
+    <link rel="icon" href="./resources/imagenes/brand/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./resources/imagenes/brand/favicon/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./resources/imagenes/brand/favicon/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./resources/css/estilos.css" />
+    <script type="module" src="./resources/js/pages/checkout.js"></script>
+  </head>
+  <body>
+    <a class="enlace-salto" href="#contenido">Saltar al contenido</a>
+    <header class="encabezado-principal">
+      <a href="index.html">
+        <img class="logo" src="./resources/imagenes/brand/logo/doctatech-logo-fondo-claro.svg" alt="DoctaTech - Inicio" />
+      </a>
+
+      <form class="buscador" role="search" aria-label="Buscar productos">
+        <input type="search" id="buscar-producto" name="buscar" placeholder="Ej.: mouse, teclado, monitor..." autocomplete="off" aria-label="Buscar producto" />
+        <button class="buscador-boton" type="submit" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.8-3.8" />
+          </svg>
+        </button>
+      </form>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="navegacion-principal" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#catalogo">Catálogo</a>
+        <a href="contacto.html">Contacto</a>
+        <button class="boton-carrito" type="button" data-abrir-carrito aria-controls="panel-carrito" aria-expanded="false" aria-label="Abrir carrito">
+          <svg class="icono-carrito" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1.6" />
+            <circle cx="19" cy="21" r="1.6" />
+            <path d="M2 3h3l2.7 12.3a1.8 1.8 0 0 0 1.8 1.4h9.3a1.8 1.8 0 0 0 1.8-1.4L22 7H6" />
+          </svg>
+          <span class="contador-carrito" id="contador-carrito" hidden>0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="contenido-principal" id="contenido" tabindex="-1">
+      <section class="seccion" id="checkout-vacio" hidden>
+        <h1>Tu carrito está vacío</h1>
+        <p>Agregá productos desde el catálogo para poder finalizar tu compra.</p>
+        <div class="acciones-formulario">
+          <a class="boton" href="index.html#catalogo">Ir al catálogo</a>
+          <button class="boton boton-secundario" type="button" id="ver-ultimo-pedido" hidden>Ver mi último pedido</button>
+        </div>
+      </section>
+
+      <div class="checkout" id="checkout-pedido">
+        <section class="seccion">
+          <h1>Finalizar compra</h1>
+          <form class="formulario" id="form-checkout" action="#" method="post">
+            <h2>Tus datos</h2>
+          <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="40" autocomplete="given-name" />
+            <small class="error-campo" id="error-nombre" data-error-de="nombre"></small>
+          </div>
+          <div class="campo">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required minlength="2" maxlength="40" autocomplete="family-name" />
+            <small class="error-campo" id="error-apellido" data-error-de="apellido"></small>
+          </div>
+          <div class="campo">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <small class="error-campo" id="error-email" data-error-de="email"></small>
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required autocomplete="tel" inputmode="tel" placeholder="351 000 0000" />
+            <small class="error-campo" id="error-telefono" data-error-de="telefono"></small>
+          </div>
+
+            <fieldset>
+              <legend>Forma de entrega</legend>
+              <input type="radio" id="entrega-retiro" name="entrega" value="retiro" checked />
+              <label for="entrega-retiro">Retiro en local (Córdoba Capital)</label>
+              <input type="radio" id="entrega-envio" name="entrega" value="envio" />
+              <label for="entrega-envio">Envío a domicilio (costo a coordinar)</label>
+              <small class="error-campo" id="error-entrega" data-error-de="entrega"></small>
+            </fieldset>
+
+            <div id="datos-envio" hidden>
+          <div class="campo">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" minlength="5" maxlength="100" autocomplete="street-address" />
+            <small class="error-campo" id="error-direccion" data-error-de="direccion"></small>
+          </div>
+          <div class="campo">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" maxlength="60" autocomplete="address-level2" />
+            <small class="error-campo" id="error-ciudad" data-error-de="ciudad"></small>
+          </div>
+          <div class="campo">
+            <label for="codigoPostal">Código postal:</label>
+            <input type="text" id="codigoPostal" name="codigoPostal" maxlength="8" autocomplete="postal-code" />
+            <small class="error-campo" id="error-codigoPostal" data-error-de="codigoPostal"></small>
+          </div>
+            </div>
+
+            <div class="campo">
+              <label for="pago">Medio de pago:</label>
+              <select id="pago" name="pago" required>
+                <option value="">Seleccionar</option>
+                <option value="transferencia">Transferencia bancaria</option>
+                <option value="efectivo">Efectivo al retirar</option>
+                <option value="mercadopago">Mercado Pago</option>
+              </select>
+              <small class="error-campo" id="error-pago" data-error-de="pago"></small>
+            </div>
+
+            <div class="campo">
+              <label for="observaciones">Observaciones (opcional):</label>
+              <textarea id="observaciones" name="observaciones" rows="3" maxlength="300"></textarea>
+              <small class="error-campo" id="error-observaciones" data-error-de="observaciones"></small>
+            </div>
+
+            <div class="campo-check">
+              <input type="checkbox" id="terminos" name="terminos" required />
+              <label for="terminos">Acepto los términos y condiciones de compra</label>
+              <small class="error-campo" id="error-terminos" data-error-de="terminos"></small>
+            </div>
+
+            <button class="boton" type="submit">Confirmar pedido</button>
+          </form>
+        </section>
+
+        <aside class="seccion resumen-pedido" aria-labelledby="titulo-resumen">
+          <h2 id="titulo-resumen">Resumen del pedido</h2>
+          <ul class="carrito-lista" id="resumen-lista"></ul>
+          <p class="resumen-linea"><span>Unidades</span> <strong id="resumen-unidades">0</strong></p>
+          <div class="resumen-carrito">
+            <p class="texto-total">Total</p>
+            <p class="importe-total" id="resumen-total">$0</p>
+          </div>
+          <a class="boton boton-secundario" href="index.html#catalogo">Seguir comprando</a>
+        </aside>
+      </div>
+
+      <section class="seccion confirmacion" id="checkout-confirmacion" hidden></section>
+    </main>
+
+    <footer class="pie-principal">
+      <p>DoctaTech - Hardware y tecnología</p>
+      <address>
+        Córdoba Capital, Argentina · <a href="mailto:contacto@doctatech.com.ar">contacto@doctatech.com.ar</a>
+      </address>
+      <p>© <span data-anio>2026</span> DoctaTech</p>
+    </footer>
+  </body>
+</html>
